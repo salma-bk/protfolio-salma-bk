@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiches et bannières</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .banner {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .banner:hover img {
+    transform: scale(1.1);
+  }
+  .actions {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .actions i {
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+  }
+  .actions i:hover {
+    color: #ff6347;
+  }
+  .heart-red {
+    color: #ff6347 !important;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="banner">
+    <img src="image1.png" alt="Bannière 1">
+    <div class="actions">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-share-alt"></i>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="image2.png" alt="Bannière 2">
+    <div class="actions">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-share-alt"></i>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="image3.png" alt="Bannière 3">
+    <div class="actions">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-share-alt"></i>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="image4.png" alt="Bannière 3">
+    <div class="actions">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-share-alt"></i>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="image5.png" alt="Bannière 3">
+    <div class="actions">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-share-alt"></i>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="image6.png" alt="Bannière 3">
+    <div class="actions">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-share-alt"></i>
+    </div>
+  </div>
+
+  <!-- Répétez cette structure pour ajouter plus de bannières -->
+
+</div>
+
+<script>
+  document.querySelectorAll('.fa-heart').forEach(function(heart) {
+    heart.addEventListener('click', function() {
+      heart.classList.toggle('heart-red');
+    });
+  });
+
+  document.querySelectorAll('.fa-share-alt').forEach(function(share) {
+    share.addEventListener('click', function() {
+      // Remplacez "lien-image" par le lien de l'image à partager
+      var imageLink = "lien-image";
+      window.location.href = "mailto:?body=" + imageLink;
+    });
+  });
+</script>
+
+</body>
+</html>
